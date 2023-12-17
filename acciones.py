@@ -3,7 +3,7 @@ import time
 
 def buscar_pokemon():
     #saltos en bici acrobatica
-    time.sleep(1)
+    time.sleep(2)
     pyautogui.keyDown('x')
     time.sleep(4)
     pyautogui.keyUp('x')

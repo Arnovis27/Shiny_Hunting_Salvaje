@@ -1,18 +1,31 @@
 from emulador import ventana
 from acciones import buscar_pokemon, huir, presionar_b
 from screenshot import captura_pantalla
-import time
+from emparejamiento import metodo_emparejamiento
+import time, cv2
 
 def main():
+    umbral= 0.8
+    combate= cv2.imread("C:/Users/arnov/Documents/Python/Shiny_Salvaje/Ruta/combate.PNG")
     valor, dimension= ventana()
+
     if valor == True:
         buscar_pokemon()
         time.sleep(1) #Segundos de aparicion del pokemon salvaje 
         presionar_b()
         time.sleep(1)
         captura_pantalla(dimension)
+        entorno= cv2.imread("C:/Users/arnov/Documents/Python/Shiny_Salvaje/Captura/captura_escene.png")
+        
+        #se verifica si entro en combate o no
+        combate_presente= metodo_emparejamiento(entorno, combate, umbral)
+        if combate_presente:
+            for i in range(3): #Ajustar al numero de pokemon que aparece  por rutas
+                sprite= cv2.imread("C:/Users/arnov/Documents/Python/Shiny_Salvaje/Ruta/Desierto/{}.PNG".format(i))
+                pokemon_presente= metodo_emparejamiento(entorno, sprite, umbral)
 
-  
+                if pokemon_presente == True:
+                    print("No parece que sea shiny")
 
 if __name__ == '__main__':
     main()
