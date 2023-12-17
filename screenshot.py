@@ -16,4 +16,3 @@ def captura_pantalla( emulador_window):
     screenshot = pyautogui.screenshot(region=(left, top, width, height))
     screenshot_path = os.path.join(carpeta_comparacion, f'captura_escene.png')
     screenshot.save(screenshot_path)
-    print("Estado guardado")

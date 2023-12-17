@@ -5,7 +5,7 @@ from emparejamiento import metodo_emparejamiento
 import time, cv2
 
 def main():
-    umbral= 0.8
+    umbral= 0.99
     combate= cv2.imread("C:/Users/arnov/Documents/Python/Shiny_Salvaje/Ruta/combate.PNG")
     valor, dimension= ventana()
 
@@ -27,8 +27,6 @@ def main():
                 for i in range(4): #Ajustar al numero de pokemon que aparece  por rutas
                     sprite= cv2.imread("C:/Users/arnov/Documents/Python/Shiny_Salvaje/Ruta/Desierto/{}.PNG".format(i+1))
                     pokemon_presente= metodo_emparejamiento(entorno, sprite, umbral)
-                    print("entro buscando pokemon")
-
                     if pokemon_presente:
                         huir()
                         aux= 1
