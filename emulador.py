@@ -1,4 +1,4 @@
-import time
+import pyautogui
 import pygetwindow as gw
 
 def ventana():
@@ -12,6 +12,13 @@ def ventana():
         # Puedes activar la ventana si lo necesitas
         emulador_window = ventanas[0]
         emulador_window.activate()
+
+        # Calcular las coordenadas relativas al centro de la ventana
+        center_x, center_y = emulador_window.left + emulador_window.width // 2, emulador_window.top + emulador_window.height // 2
+
+        # Hacer clic en el centro de la ventana
+        pyautogui.click(center_x, center_y)
+        
         return True, emulador_window
     else:
         return False

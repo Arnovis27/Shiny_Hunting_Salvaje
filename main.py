@@ -7,8 +7,9 @@ def main():
     valor, dimension= ventana()
     if valor == True:
         buscar_pokemon()
-        time.sleep(7) #Segundos de aparicion del pokemon salvaje 
+        time.sleep(1) #Segundos de aparicion del pokemon salvaje 
         presionar_b()
+        time.sleep(1)
         captura_pantalla(dimension)
 
   
