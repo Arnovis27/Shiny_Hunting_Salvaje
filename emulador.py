@@ -21,4 +21,4 @@ def ventana():
         
         return True, emulador_window
     else:
-        return False
+        return False, None

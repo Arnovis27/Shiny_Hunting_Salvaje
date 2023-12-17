@@ -38,6 +38,9 @@ def main():
 
                 contador_encuentros+=1 #Pone ciclo para saber cuantos pokemon ha visto.
                 print("Pokemon salvaje #{}".format(contador_encuentros))
+
+    else:
+        print("Emulador Cerrado")
                 
 
 if __name__ == '__main__':
