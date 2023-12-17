@@ -3,9 +3,16 @@ import time
 
 def buscar_pokemon():
     #saltos en bici acrobatica
+    time.sleep(1)
     pyautogui.keyDown('x')
     time.sleep(8)
     pyautogui.keyUp('x')
+
+def presionar_b():
+    for _ in range(4):
+        pyautogui.keyDown('x')
+        pyautogui.keyUp('x')
+        time.sleep(1)
 
 def huir():
     pyautogui.keyDown('s')
