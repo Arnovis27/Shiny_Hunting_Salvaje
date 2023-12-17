@@ -21,11 +21,12 @@ def main():
         combate_presente= metodo_emparejamiento(entorno, combate, umbral)
         if combate_presente:
             for i in range(3): #Ajustar al numero de pokemon que aparece  por rutas
-                sprite= cv2.imread("C:/Users/arnov/Documents/Python/Shiny_Salvaje/Ruta/Desierto/{}.PNG".format(i))
+                sprite= cv2.imread("C:/Users/arnov/Documents/Python/Shiny_Salvaje/Ruta/Desierto/{}.PNG".format(i+1))
                 pokemon_presente= metodo_emparejamiento(entorno, sprite, umbral)
 
-                if pokemon_presente == True:
-                    print("No parece que sea shiny")
+                if pokemon_presente:
+                    huir()
+                
 
 if __name__ == '__main__':
     main()
