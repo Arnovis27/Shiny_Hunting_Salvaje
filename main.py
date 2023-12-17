@@ -5,13 +5,14 @@ from emparejamiento import metodo_emparejamiento
 import time, cv2
 
 def main():
-    umbral= 0.99
+    umbral= 0.96
     combate= cv2.imread("C:/Users/arnov/Documents/Python/Shiny_Salvaje/Ruta/combate.PNG")
     valor, dimension= ventana()
 
     if valor == True:
         contador_encuentros=0
 
+        tiempo_inicio = time.time()
         while True:
             aux=0 #se vuelve 1 si al menos el pokemon fue identificado una vez dentro la busqueda
             buscar_pokemon()
@@ -32,10 +33,16 @@ def main():
                         aux= 1
 
                 if aux==0:
-                    break #rompe el ciclo, while, porque ha encontrado shiny?
-
+                    print("¡¡¡¡¡¡¡SHINYYYYYYYYYYYYYY!!!!!!!")
+                    break 
+                
+                # Obtener el tiempo de ejecución
+                tiempo_fin = time.time()
+                total_segundos = tiempo_fin - tiempo_inicio
+                horas, rem = divmod(total_segundos, 3600)
+                minutos, segundos = divmod(rem, 60)
                 contador_encuentros+=1 #Pone ciclo para saber cuantos pokemon ha visto.
-                print("Pokemon salvaje #{}".format(contador_encuentros))
+                print("Pokemon Salvajes: {} , Hora: {}, Minuto: {}, Segundo: {}".format(contador_encuentros, horas,minutos,segundos))
 
     else:
         print("Emulador Cerrado")
