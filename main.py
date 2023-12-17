@@ -24,9 +24,10 @@ def main():
             #se verifica si entro en combate o no
             combate_presente= metodo_emparejamiento(entorno, combate, umbral)
             if combate_presente:
-                for i in range(3): #Ajustar al numero de pokemon que aparece  por rutas
+                for i in range(4): #Ajustar al numero de pokemon que aparece  por rutas
                     sprite= cv2.imread("C:/Users/arnov/Documents/Python/Shiny_Salvaje/Ruta/Desierto/{}.PNG".format(i+1))
                     pokemon_presente= metodo_emparejamiento(entorno, sprite, umbral)
+                    print("entro buscando pokemon")
 
                     if pokemon_presente:
                         huir()
@@ -35,7 +36,8 @@ def main():
                 if aux==0:
                     break #rompe el ciclo, while, porque ha encontrado shiny?
 
-                print("Pokemon salvaje #{}".format(contador_encuentros+1))
+                contador_encuentros+=1 #Pone ciclo para saber cuantos pokemon ha visto.
+                print("Pokemon salvaje #{}".format(contador_encuentros))
                 
 
 if __name__ == '__main__':
