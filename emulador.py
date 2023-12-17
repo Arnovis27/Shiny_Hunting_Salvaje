@@ -12,6 +12,6 @@ def ventana():
         # Puedes activar la ventana si lo necesitas
         emulador_window = ventanas[0]
         emulador_window.activate()
-        return True
+        return True, emulador_window
     else:
         return False
