@@ -42,7 +42,7 @@ def main():
                 horas, rem = divmod(total_segundos, 3600)
                 minutos, segundos = divmod(rem, 60)
                 contador_encuentros+=1 #Pone ciclo para saber cuantos pokemon ha visto.
-                print("Pokemon Salvajes: {} , Hora: {}, Minuto: {}, Segundo: {}".format(contador_encuentros, horas,minutos,segundos))
+                print("Pokemon Salvajes:",contador_encuentros,", Hora:",int(horas),", Minuto:", int(minutos),", Segundo:",int(segundos))
 
     else:
         print("Emulador Cerrado")

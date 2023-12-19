@@ -3,13 +3,13 @@ import time
 
 def buscar_pokemon():
     #saltos en bici acrobatica
-    time.sleep(2)
+    time.sleep(1)
     pyautogui.keyDown('x')
-    time.sleep(4)
+    time.sleep(2)
     pyautogui.keyUp('x')
 
 def presionar_b():
-    for _ in range(4):
+    for _ in range(3):
         pyautogui.keyDown('x')
         pyautogui.keyUp('x')
 
