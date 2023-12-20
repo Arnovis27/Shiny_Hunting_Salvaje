@@ -21,7 +21,7 @@ Muy importante que te dirijas a opciones del juego y realices:
 - Velocidad del texto: Rapida  
 - Animacion de Combate: No  
 Esto con el fin de optimizar el tiempo en los encuentros.  
-Este programa NO abre el juego autamicamente, debes establecer al persona en la zona de caza con una bici automatica y un pokemon que tenga de habilidad **Iluminacion** como lider de equipo, es recomendable que el pokemon tenga equipado el objeto **Bola Humo** para que siempre pueda huir del combate.
+Este programa NO abre el juego automaticamente, debes establecer al personaje en la zona de caza con una bici acrobatica y un pokemon que tenga de habilidad **Iluminacion** como lider de equipo, es recomendable que el pokemon tenga equipado el objeto **Bola Humo** para que siempre pueda huir del combate y que de nombre solo tenga un caracter, asi se usa menos tiempo para realizar el encuentro.
 
 ## Configuración y Uso
 
@@ -38,8 +38,8 @@ Este programa NO abre el juego autamicamente, debes establecer al persona en la 
     - Asegúrate de proporcionar la ruta correcta del sprite de Pokémon Shiny en ´main.py´. Esto es crucial para el reconocimiento preciso.
     Guiate del que encuetras en la carpeta Ruta en la seccion Desierto, son los archivos.png que esta enumerados por orden numerico.
     - Para poder hacer el shiny hunting, debes proporcionar al codigo una foto de los pokemon que aparecen en la ruta en la que estas buscando el
-    pokemon shiny guiate de los que salen en el desierto usando en este codigo de ejemplo.
-    - Es crucial que la imagen de combate.PNG que aparece en la carpeta de ruta sea exactamente igual siempre, ya que esta determina el estado
+    pokemon shiny guiate de los que salen en el desierto que se esta usando en este codigo de ejemplo.
+    - Es crucial que la imagen de combate.PNG que aparece en la carpeta de Ruta sea exactamente igual siempre, ya que esta determina el estado
     en el que nos encontramos, es decir, con ella podremos saber si estamos dentro de un combate o no para poder pasar al analisis de imagenes de
     los pokemon
 
