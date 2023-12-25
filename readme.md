@@ -13,7 +13,9 @@ Este proyecto está diseñado para ayudarte a encontrar Pokémon Shiny en el jue
 Para aumentar la velocidad del emulador y funcione mas rapido la busqueda  
 **Options** > **Frame Skip** > **Throttle** > **Other** > **1000**  
 Para ejecutar la ventana del emulador, debes hacerlo en
-**Options** > **Video** > **x2**    
+**Options** > **Video** > **x2**  
+**Options** > **Video** > **Render Method** > **Direct 3D**  
+**Options** > **Gameboy** > **Real Colors**  
 En el siguiente cuadro se vera reflejado los controles que debes asignar en el emulador para que el algoritmo funcione correctamente:
 | Tecla  | Accion |
 | ------ | ------ |
